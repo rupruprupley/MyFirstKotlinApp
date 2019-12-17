@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.content.Intent
+import android.view.View
+import android.widget.EditText
 
-
+//test
 class DisplayMessageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,17 @@ class DisplayMessageActivity : AppCompatActivity() {
         // Capture the layout's TextView and set the string as its text
         val textView = findViewById<TextView>(R.id.textView).apply {
             text = message
+        }
+
+        fun button2(view: View) {
+            val newmessage = findViewById<TextView>(R.id.textView).apply {
+                this:TextView!
+                text = newmessage
+            }
+            val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, message)
+            }
+            startActivity(intent)
         }
     }
 }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">My First Kotlin App</string>
     <string name="edit_message">Enter a Message</string>
+    <string name="newmessage">A Group of Otters is called a RAFT!</string>
     <string name="button_send">Send</string>
+    <string name="surprise">Click Me!</string>
 </resources>
